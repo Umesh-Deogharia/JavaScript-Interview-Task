@@ -1,9 +1,6 @@
 const body = document.querySelector('body');
-
-
 const div = document.createElement('div');
 const btn = document.createElement('button');
-
 div.innerHTML = `<h1>Click the button to get a joke</h1>`;
 btn.innerText = `Get New Joke`;
 
@@ -30,9 +27,7 @@ btn.addEventListener('click', async () => {
         console.error(error.message)
         btn.disabled = true;
     }
-
 })
-
 
 body.appendChild(div);
 body.appendChild(btn);

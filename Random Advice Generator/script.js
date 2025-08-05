@@ -4,15 +4,12 @@ const body = document.querySelector('body');
 const div = document.createElement('div');
 const btn = document.createElement('button');
 btn.innerText = 'New Quote';
-
 // Add click event
 btn.addEventListener('click', generateAdvice);
-
 // Async function to fetch and display advice
 async function generateAdvice() {
     try {
         const api = await fetch(`https://api.adviceslip.com/advice?t=${Math.random()}`);
-
 
         if (!api.ok) {
             throw new Error('API Not Fetched');
